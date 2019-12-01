@@ -1,5 +1,5 @@
 import React from "react";
-import ToggleStartButton from "./toggleStartButton/toggleStartButton";
+import ToggleStartButton from "./ToggleStartButton/ToggleStartButton";
 import UtilButton from "./UtilButton/UtilButton";
 
 export default class ControlArea extends React.Component {
