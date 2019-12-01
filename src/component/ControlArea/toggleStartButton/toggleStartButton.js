@@ -1,6 +1,12 @@
 import React from "react";
 export default class ToggleStartButton extends React.Component {
   render() {
-    return <button onClick={this.props.toggleStart}>toggleStartButton</button>;
+    let buttonText = "";
+    if (this.props.isLive) {
+      buttonText = "Stop";
+    } else {
+      buttonText = "Start";
+    }
+    return <button onClick={this.props.toggleStart}>{buttonText}</button>;
   }
 }

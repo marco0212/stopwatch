@@ -28,7 +28,10 @@ export default class App extends Component {
     return (
       <div className="App">
         <TimeMonitor time={this.state.milisec} />
-        <ControlArea toggleStart={this.toggleStart.bind(this)} />
+        <ControlArea
+          toggleStart={this.toggleStart.bind(this)}
+          appStatus={this.state.isLive}
+        />
       </div>
     );
   }

@@ -6,8 +6,11 @@ export default class ControlArea extends React.Component {
   render() {
     return (
       <div className="control-area">
-        <UtilButton />
-        <ToggleStartButton toggleStart={this.props.toggleStart} />
+        <UtilButton isLive={this.props.appStatus} />
+        <ToggleStartButton
+          toggleStart={this.props.toggleStart}
+          isLive={this.props.appStatus}
+        />
       </div>
     );
   }
