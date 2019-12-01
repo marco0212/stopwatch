@@ -22,7 +22,7 @@ export default class App extends Component {
     this.setState({ milisec: this.state.milisec + 1 });
   }
   render() {
-    return this.state.milisec;
+    return convertToTime(this.state.milisec);
   }
 }
 
