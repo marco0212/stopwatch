@@ -7,8 +7,19 @@ export default class App extends Component {
     super(props);
     this.state = {
       milisec: 0,
-      isLive: false
+      isLive: false,
+      history: []
     };
+  }
+  utilFunction() {
+    const isLive = this.state.isLive;
+    if (isLive) {
+      const copyHistory = this.state.history;
+      copyHistory.push(this.state.milisec);
+      this.setState({ history: copyHistory });
+    } else {
+      this.setState({ milisec: 0 });
+    }
   }
   toggleStart() {
     const isLive = this.state.isLive;
@@ -30,6 +41,7 @@ export default class App extends Component {
         <TimeMonitor time={this.state.milisec} />
         <ControlArea
           toggleStart={this.toggleStart.bind(this)}
+          utilFunction={this.utilFunction.bind(this)}
           appStatus={this.state.isLive}
         />
       </div>

@@ -7,6 +7,6 @@ export default class UtilButton extends React.Component {
     } else {
       buttonText = "Reset";
     }
-    return <button>{buttonText}</button>;
+    return <button onClick={this.props.utilFunction}>{buttonText}</button>;
   }
 }
