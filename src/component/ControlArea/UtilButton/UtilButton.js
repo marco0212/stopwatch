@@ -3,9 +3,9 @@ export default class UtilButton extends React.Component {
   render() {
     let buttonText = "";
     if (this.props.isLive) {
-      buttonText = "Push";
+      buttonText = "랩";
     } else {
-      buttonText = "Reset";
+      buttonText = "재설정";
     }
     return <button onClick={this.props.utilFunction}>{buttonText}</button>;
   }
