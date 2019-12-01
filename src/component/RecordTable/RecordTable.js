@@ -6,12 +6,12 @@ export default class RecordTable extends React.Component {
     return (
       <div className="table-area">
         <ul>
-          {this.props.record.map((time, i) => {
-            const key = `랩 ${i + 1}`;
+          {this.props.record.map(data => {
+            const key = `랩 ${data.index}`;
             return (
               <li key={key}>
                 <strong>{key}</strong>
-                <time>{convertToTime(time)}</time>
+                <time>{convertToTime(data.sec)}</time>
               </li>
             );
           })}

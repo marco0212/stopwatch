@@ -15,9 +15,10 @@ export default class App extends Component {
   }
   utilFunction() {
     const isLive = this.state.isLive;
+    let index = this.state.history.length + 1;
     if (isLive) {
-      const copyHistory = this.state.history;
-      copyHistory.push(this.state.milisec);
+      const copyHistory = this.state.history.slice();
+      copyHistory.unshift({ sec: this.state.milisec, index });
       this.setState({ history: copyHistory });
     } else {
       this.setState({ milisec: 0, history: [] });
