@@ -46,7 +46,7 @@ export default class App extends Component {
           utilFunction={this.utilFunction.bind(this)}
           appStatus={this.state.isLive}
         />
-        <RecordTable />
+        <RecordTable record={this.state.history} />
       </div>
     );
   }
