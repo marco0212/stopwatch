@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TimeMonitor from "./component/timeMonitor/timeMonitor";
+import ControlArea from "./component/ControlArea/ControlArea";
 
 export default class App extends Component {
   constructor(props) {
@@ -24,6 +25,11 @@ export default class App extends Component {
     this.setState({ milisec: this.state.milisec + 1 });
   }
   render() {
-    return <TimeMonitor time={this.state.milisec} />;
+    return (
+      <div className="App">
+        <TimeMonitor time={this.state.milisec} />
+        <ControlArea toggleStart={this.toggleStart.bind(this)} />
+      </div>
+    );
   }
 }
