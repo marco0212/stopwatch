@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TimeMonitor from "./component/timeMonitor/timeMonitor";
 import ControlArea from "./component/ControlArea/ControlArea";
+import RecordTable from "./component/RecordTable/RecordTable";
 import "./App.css";
 
 export default class App extends Component {
@@ -45,6 +46,7 @@ export default class App extends Component {
           utilFunction={this.utilFunction.bind(this)}
           appStatus={this.state.isLive}
         />
+        <RecordTable />
       </div>
     );
   }
