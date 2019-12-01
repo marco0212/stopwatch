@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TimeMonitor from "./component/TimeMonitor/TimeMonitor";
 import ControlArea from "./component/ControlArea/ControlArea";
 import RecordTable from "./component/RecordTable/RecordTable";
+import { convertToTime } from "./function";
 import "./App.css";
 
 export default class App extends Component {
@@ -35,19 +36,31 @@ export default class App extends Component {
     }
     this.setState({ isLive: !isLive });
   }
+  getTimeEle(time) {
+    const arr = convertToTime(time).split("");
+    return arr.map((x, i) => {
+      if (!Number.isNaN(Number(x))) return <span key={i}>{x}</span>;
+      return x;
+    });
+  }
   tick() {
     this.setState({ milisec: this.state.milisec + 1 });
   }
   render() {
     return (
       <div className="App">
-        <TimeMonitor time={this.state.milisec} />
+        <TimeMonitor time={this.state.milisec} getTimeEle={this.getTimeEle} />
         <ControlArea
           toggleStart={this.toggleStart.bind(this)}
           utilFunction={this.utilFunction.bind(this)}
           appStatus={this.state.isLive}
         />
-        <RecordTable record={this.state.history} />
+        <RecordTable
+          record={this.state.history}
+          getTimeEle={this.getTimeEle}
+          time={this.state.milisec}
+          appStatus={this.state.isLive}
+        />
       </div>
     );
   }
