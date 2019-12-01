@@ -54,6 +54,7 @@ export default class App extends Component {
           toggleStart={this.toggleStart.bind(this)}
           utilFunction={this.utilFunction.bind(this)}
           appStatus={this.state.isLive}
+          time={this.state.milisec}
         />
         <RecordTable
           record={this.state.history}

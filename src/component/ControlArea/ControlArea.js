@@ -8,6 +8,7 @@ export default class ControlArea extends React.Component {
       <div className="control-area">
         <UtilButton
           utilFunction={this.props.utilFunction}
+          time={this.props.time}
           isLive={this.props.appStatus}
         />
         <ToggleStartButton
