@@ -1,12 +1,11 @@
 import React from "react";
-import { convertToTime } from "../../function";
 
-export default class TimeMonitor extends React.Component {
-  render() {
-    return (
-      <div className="monitor">
-        <time>{convertToTime(this.props.time)}</time>
-      </div>
-    );
-  }
+function TimeMonitor(props) {
+  return (
+    <div className="monitor">
+      <time>{props.getTimeEle(props.time)}</time>
+    </div>
+  );
 }
+
+export default TimeMonitor;
