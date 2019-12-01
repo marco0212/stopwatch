@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TimeMonitor from "./component/timeMonitor/timeMonitor";
 import ControlArea from "./component/ControlArea/ControlArea";
+import "./App.css";
 
 export default class App extends Component {
   constructor(props) {
