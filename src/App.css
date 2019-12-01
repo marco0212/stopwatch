@@ -7,17 +7,38 @@
   flex-direction: column;
   width: 400px;
   height: 100vh;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: auto;
+}
+.monitor {
+  display: flex;
+  align-items: center;
   font-size: 50px;
+  flex: 3;
 }
 .control-area {
+  flex: 1;
   display: flex;
   justify-content: space-between;
 }
+.table-area {
+  flex: 3;
+}
+.table-area li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #ebebeb;
+}
 button {
-  width: 80px;
-  height: 80px;
+  border: none;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   font-size: 14px;
+  border: 1px solid #ebebeb;
+}
+button:focus,
+button:active {
+  outline: none;
 }
