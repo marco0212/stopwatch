@@ -30,10 +30,14 @@ body {
 }
 .monitor time {
   font-size: 75px;
-  width: 320px;
   display: inline-block;
-
   white-space: nowrap;
+  word-spacing: -3px;
+}
+.monitor time span {
+  width: 48px;
+  display: inline-block;
+  text-align: center;
 }
 .control-area {
   display: flex;
@@ -54,6 +58,11 @@ body {
   box-sizing: border-box;
   border-top: 1px solid #666;
 }
+.table-area time span {
+  display: inline-block;
+  width: 12px;
+  text-align: center;
+}
 button {
   border: none;
   width: 90px;
@@ -70,6 +79,9 @@ button {
 button:focus,
 button:active {
   outline: none;
+}
+button.disable {
+  opacity: 0.5;
 }
 button.red {
   background-color: rgba(230, 0, 0, 0.3);
