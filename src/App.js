@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import TimeMonitor from "./component/timeMonitor/timeMonitor";
+
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -22,6 +24,6 @@ export default class App extends Component {
     this.setState({ milisec: this.state.milisec + 1 });
   }
   render() {
-    return convertToTime(this.state.milisec);
+    return <TimeMonitor time={this.state.milisec} />;
   }
 }
