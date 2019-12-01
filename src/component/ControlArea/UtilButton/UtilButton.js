@@ -1,23 +1,20 @@
 import React from "react";
-export default class UtilButton extends React.Component {
-  render() {
-    let buttonText = "",
-      className = "";
-    if (this.props.time) {
-      if (this.props.isLive) {
-        buttonText = "랩";
-      } else {
-        buttonText = "재설정";
-      }
-    } else {
+export default function UtilButton(props) {
+  let buttonText = "",
+    className = "";
+  if (props.time) {
+    if (props.isLive) {
       buttonText = "랩";
-      className = "disable";
+    } else {
+      buttonText = "재설정";
     }
-
-    return (
-      <button className={className} onClick={this.props.utilFunction}>
-        {buttonText}
-      </button>
-    );
+  } else {
+    buttonText = "랩";
+    className = "disable";
   }
+  return (
+    <button className={className} onClick={props.utilFunction}>
+      {buttonText}
+    </button>
+  );
 }
