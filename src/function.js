@@ -9,8 +9,8 @@ function convertToTime(time) {
   if (minute < 10) minute = "0" + minute.toString();
   if (milisec < 10) milisec = "0" + milisec.toString();
 
-  if (!hour) return `${minute}: ${second}. ${milisec}`;
-  return `${hour}: ${minute}: ${second}. ${milisec}`;
+  if (!hour) return `${minute}:${second}.${milisec}`;
+  return `${hour}:${minute}:${second}.${milisec}`;
 }
 
 export { convertToTime };

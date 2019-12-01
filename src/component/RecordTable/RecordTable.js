@@ -6,7 +6,8 @@ export default class RecordTable extends React.Component {
     return (
       <div className="table-area">
         <ul>
-          {this.props.record.map(data => {
+          {this.props.record.map((data, i) => {
+            if (!data) return <li key={i}></li>;
             const key = `랩 ${data.index}`;
             return (
               <li key={key}>
