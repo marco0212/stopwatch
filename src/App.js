@@ -20,7 +20,7 @@ export default class App extends Component {
       copyHistory.push(this.state.milisec);
       this.setState({ history: copyHistory });
     } else {
-      this.setState({ milisec: 0 });
+      this.setState({ milisec: 0, history: [] });
     }
   }
   toggleStart() {
