@@ -1,3 +1,8 @@
+html,
+body,
+#root {
+  height: 100%;
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +15,7 @@ body {
   font-family: Apple SD Gothic Neo, AppleSDGothicNeo, Noto Sans CJK KR,
     NanumGothic, Malgun Gothic, 돋움, dotum, arial, sans-serif;
   background-color: #000;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 18px;
 }
 .App {
@@ -18,7 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 480px;
-  height: 100vh;
+  height: 100%;
   justify-content: space-between;
   margin: auto;
   padding: 20px;
@@ -35,6 +40,7 @@ body {
   display: inline-block;
   white-space: nowrap;
   word-spacing: -3px;
+  font-weight: 100;
 }
 .monitor time span {
   width: 48px;
@@ -47,7 +53,6 @@ body {
   margin-bottom: 40px;
 }
 .table-area {
-  flex: 1;
   overflow-y: hidden;
   max-height: 240px;
   border-bottom: 1px solid #666;
