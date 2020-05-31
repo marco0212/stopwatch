@@ -1,5 +1,5 @@
 {
-  "name": "my-timer",
+  "name": "stopwatch",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -30,7 +30,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://marco0212.github.io/my-stopwatch",
+  "homepage": "https://marco0212.github.io/stopwatch",
   "devDependencies": {
     "gh-pages": "^2.1.1"
   }

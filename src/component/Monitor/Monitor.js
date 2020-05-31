@@ -1,6 +1,6 @@
 import React from "react";
 
-function TimeMonitor(props) {
+function Monitor(props) {
   return (
     <div className="monitor">
       <time>{props.getTimeEle(props.time)}</time>
@@ -8,4 +8,4 @@ function TimeMonitor(props) {
   );
 }
 
-export default TimeMonitor;
+export default Monitor;

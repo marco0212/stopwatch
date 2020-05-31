@@ -1,4 +1,4 @@
-# my-timer
+# stopwatch
 
 ![Preview GIF](./hello.gif)
 
@@ -8,7 +8,7 @@
 
 React.js를 활용해서 구현.
 
-[사이트 바로가기](https://marco0212.github.io/my-stopwatch/)
+[사이트 바로가기](https://marco0212.github.io/stopwatch/)
 
 ## 기능
 

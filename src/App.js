@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TimeMonitor from "./component/TimeMonitor/TimeMonitor";
+import TimeMonitor from "./component/Monitor/Monitor";
 import ControlArea from "./component/ControlArea/ControlArea";
 import RecordTable from "./component/RecordTable/RecordTable";
 import { convertToTime } from "./function";
